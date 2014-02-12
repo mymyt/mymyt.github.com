@@ -26,11 +26,18 @@
             </div>
           </div>
           <div class="inner cover">
-            <button class="btn btn-large btn-primary" type="button">Пожаловаться</button>
+            <button class="btn btn-large btn-primary" type="button">
+              <span class="ui-button-text">Пожаловаться</span>
+            </button>
+              <div id="disqus_thread"></div>
+            <div style="display:none">
+              <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
           </div>
           <div class="mastfoot">
             <div class="inner">
-              <p><a href="http://mym.yt">Mym.yt</a></p>
+              <p><a href="http://mym.yt#disqus_thread">Mym.yt</a></p>
             </div>
           </div>
         </div>
@@ -38,11 +45,15 @@
     </div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script >
-    $('.btn-primary').click(function(){
-      $(this).removeClass('btn-primary').addClass('btn-success');
-      alert("Ты мой бедный зайчик");
-    });
+    <script src="js/site.js"></script>
+    <script>
+      var disqus_shortname = 'mymyt';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
     </script>
   </body>
 </html>
